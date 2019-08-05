@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb://userdb1:paq0one@ds239936.mlab.com:39936/react-db",
+  "jwtSecret": "somesecret117"
+}
