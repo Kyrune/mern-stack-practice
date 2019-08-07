@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb://userdb1:paq0one@ds239936.mlab.com:39936/react-db",
-  "jwtSecret": "somesecret117"
+  "jwtSecret": "somesecret117",
+  "githubClientId": "33d0c1ad417d945a9f85",
+  "githubSecret": "75171190f46f65ca39b6c463ffffdb48c465d558"
 }
