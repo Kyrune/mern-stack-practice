@@ -29,11 +29,11 @@ const ProfileItem = ({ profile: {
                 ))}
             </ul>
         </div>
-    )
-}
+    );
+};
 
 ProfileItem.propTypes = {
     profile: PropTypes.object.isRequired
-}
+};
 
-export default ProfileItem
+export default ProfileItem;

@@ -26,16 +26,16 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
                 </div>
             </Fragment> }
         </Fragment>
-    )
-}
+    );
+};
 
 Profiles.propTypes = {
     getProfiles: PropTypes.func.isRequired,
     profile: PropTypes.object.isRequired
-}
+};
 
 const mapStateToProps = state => ({
     profile: state.profile
 });
 
-export default connect(mapStateToProps, { getProfiles })(Profiles)
+export default connect(mapStateToProps, { getProfiles })(Profiles);
