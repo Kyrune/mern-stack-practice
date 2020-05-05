@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import PostItem from "../posts/PostItem";
 import CommentForm from "../post/CommentForm";
+import CommentItem from "../post/CommentItem";
 import { getPost } from "../../actions/post";
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
@@ -21,17 +22,22 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
       </Link>
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
+      <div className="comments">
+        {post.comment.map((comment) => (
+          <CommentItem kay={comment._id} comment={comment} postId={post._id} />
+        ))}
+      </div>
     </Fragment>
   );
 };
 
 Post.propTypes = {
   getPost: PropTypes.func.isRequired,
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  post: state.post
+  post: state.post,
 });
 
 export default connect(mapStateToProps, { getPost })(Post);
