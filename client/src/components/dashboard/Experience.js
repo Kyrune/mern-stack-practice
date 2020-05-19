@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
+import moment from "moment";
 import { connect } from "react-redux";
 import { deleteExperience } from "../../actions/profile";
-import { profile_url } from "gravatar";
 
 const Experience = ({ experience, deleteExperience }) => {
   const experiences = experience.map(exp => (
@@ -11,11 +11,11 @@ const Experience = ({ experience, deleteExperience }) => {
       <td>{exp.company}</td>
       <td className="hide-sm">{exp.title}</td>
       <td>
-        <Moment format="YYYY/MM/DD">{exp.from}</Moment> -{" "}
+        <Moment format="YYYY/MM/DD">{moment.utc(exp.from)}</Moment> -{" "}
         {exp.to === null ? (
           " Now"
         ) : (
-          <Moment format="YYYY/MM/DD">{exp.to}</Moment>
+          <Moment format="YYYY/MM/DD">{moment.utc(exp.to)}</Moment>
         )}
       </td>
       <td>
