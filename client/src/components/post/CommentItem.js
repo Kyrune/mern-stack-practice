@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import Moment from "react-moment";
 import { deleteComment } from "../../actions/post";
 
@@ -39,13 +39,13 @@ const CommentItem = ({
 };
 
 CommentItem.propTypes = {
-  postId: PropTypes.number.isRequired,
+  postId: PropTypes.string.isRequired,
   comment: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
   deleteComment: PropTypes.func.isRequired
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   auth: state.auth
 });
 
