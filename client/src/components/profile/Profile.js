@@ -14,11 +14,11 @@ const Profile = ({
   getProfileById,
   profile: { profile, loading },
   auth,
-  match,
+  match
 }) => {
   useEffect(() => {
     getProfileById(match.params.id);
-  }, [getProfileById]);
+  }, [getProfileById, match.params.id]);
 
   return (
     <Fragment>
@@ -44,7 +44,7 @@ const Profile = ({
               <h2 className="text-primary">Experience</h2>
               {profile.experience.length > 0 ? (
                 <Fragment>
-                  {profile.experience.map((experience) => (
+                  {profile.experience.map(experience => (
                     <ProfileExperience
                       key={experience._id}
                       experience={experience}
@@ -59,7 +59,7 @@ const Profile = ({
               <h2 className="text-primary">Education</h2>
               {profile.education.length > 0 ? (
                 <Fragment>
-                  {profile.education.map((education) => (
+                  {profile.education.map(education => (
                     <ProfileEducation
                       key={education._id}
                       education={education}
