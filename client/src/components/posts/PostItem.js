@@ -29,21 +29,20 @@ const PostItem = ({
       {showActions && (
         <Fragment>
           <button
-            onClick={(e) => addLike(_id)}
+            onClick={e => addLike(_id)}
             type="button"
             className="btn btn-light"
           >
-            <i className="fas fa-thumbs-up"></i> Like{" "}
+            <i className="fas fa-thumbs-up"></i>{" "}
             <span>
-              {likes && likes.length > 0 && <span>{likes.length}</span>}
+              {likes.length > 0 && <span>{likes.length}</span>}
             </span>
           </button>
           <button
-            onClick={(e) => removeLike(_id)}
+            onClick={e => removeLike(_id)}
             type="button"
             className="btn btn-light"
           >
-            Dislike
             <i className="fas fa-thumbs-down"></i>
           </button>
           <Link to={`/posts/${_id}`} className="btn btn-primary">
@@ -54,11 +53,11 @@ const PostItem = ({
           </Link>
           {!auth.loading && user === auth.user._id && (
             <button
-              onClick={(e) => deletePost(_id)}
+              onClick={e => deletePost(_id)}
               type="button"
               className="btn btn-danger"
             >
-              <i className="fas fa-times"></i> Delete
+              <i className="fas fa-times"></i>
             </button>
           )}
         </Fragment>
@@ -79,7 +78,7 @@ PostItem.propTypes = {
   deletePost: PropTypes.func.isRequired
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   auth: state.auth
 });
 
