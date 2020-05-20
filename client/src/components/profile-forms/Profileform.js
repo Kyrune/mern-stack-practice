@@ -82,11 +82,11 @@ const ProfileForm = ({
             <option value="Developer">Developer</option>
             <option value="Junior Developer">Junior Developer</option>
             <option value="Senior Developer">Senior Developer</option>
-            <option value="Developer">Front-end Developer</option>
-            <option value="Developer">Back-end Developer</option>
-            <option value="Developer">Full Stack Developer</option>
-            <option value="Developer">Web Developer</option>
-            <option value="Developer">Software Engineer</option>
+            <option value="Front-end Developer">Front-end Developer</option>
+            <option value="Back-end Developer">Back-end Developer</option>
+            <option value="Full Stack Developer">Full Stack Developer</option>
+            <option value="Web Developer">Web Developer</option>
+            <option value="Software Engineer">Software Engineer</option>
             <option value="Manager">Manager</option>
             <option value="Student or Learning">Student or Learning</option>
             <option value="Instructor">Instructor or Teacher</option>
@@ -237,8 +237,7 @@ const ProfileForm = ({
             </div>
           </Fragment>
         )}
-
-        <input type="submit" className="btn btn-primary my-1" />
+          <input type="submit" className="btn btn-primary my-1" />
         <Link className="btn btn-light my-1" to="/dashboard">
           Go Back
         </Link>
