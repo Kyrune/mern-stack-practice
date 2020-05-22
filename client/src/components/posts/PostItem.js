@@ -13,7 +13,7 @@ const PostItem = ({
   post: { _id, text, name, avatar, user, likes, comments, date },
   showActions
 }) => (
-  <div className="post bg-white p-1 my-1">
+  <div className="post bg-dark p-1 my-1">
     <div>
       <Link to={`/profile/${user}`}>
         <img className="round-img" src={avatar} alt="" />
@@ -31,7 +31,7 @@ const PostItem = ({
           <button
             onClick={e => addLike(_id)}
             type="button"
-            className="btn btn-light"
+            className="btn btn-dark"
           >
             <i className="fas fa-thumbs-up"></i>{" "}
             <span>
@@ -41,7 +41,7 @@ const PostItem = ({
           <button
             onClick={e => removeLike(_id)}
             type="button"
-            className="btn btn-light"
+            className="btn btn-dark"
           >
             <i className="fas fa-thumbs-down"></i>
           </button>
