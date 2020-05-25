@@ -17,7 +17,7 @@ const ProfileExperience = ({
         <strong>Position: </strong> {title}
       </p>
       <p>
-        <strong>Location: {location}</strong>
+        <strong>Location: </strong> {location}
       </p>
       <p>
         <strong>Description: </strong> {description}
