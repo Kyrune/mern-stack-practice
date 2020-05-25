@@ -79,7 +79,7 @@ router.get("/:id", auth, async (req, res) => {
   }
 });
 
-// @route   DELETE api/posts
+// @route   DELETE api/posts/:id
 // @desc    Delete a post
 // @access  Private
 router.delete("/:id", auth, async (req, res) => {
@@ -92,14 +92,12 @@ router.delete("/:id", auth, async (req, res) => {
 
     // Check user
     if (post.user.toString() !== req.user.id) {
-      return resizeTo.status(401).json({ msg: "User not authorized" });
+      return res.status(401).json({ msg: "User not authorized" });
     }
 
     await post.remove();
 
     res.json({ msg: "Post removed" });
-
-    res.json(post);
   } catch (err) {
     console.error(err.message);
     if (err.kind === "ObjectId") {
